@@ -1,61 +1,49 @@
 #pricing-content {
-	padding: 40px 0;
-	h1 {
-		font-size: 32px;
-		line-height: 32px;
-		font-weight: 800;
-		padding-bottom: 50px;
-	}
+  background-color: #7adfbf;
+  padding: 64px;
+
+  .plan-card {
+    height: 280px;
+    padding: 24px;
+
+    border-radius: 16px;
+    margin-right: 32px;
+    background-color: #fff;
+
+    .price {
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      font-size: 16pt;
+    }
+
+    > li {
+      font-size: 11pt;
+    }
+
+    .button {
+      background-color: #fff;
+      color: darken($color: #7adfbf, $amount: 30%);
+      border-radius: 8px;
+      border: 1px solid darken($color: #7adfbf, $amount: 30%);
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .button:hover {
+      color: #fff;
+      background-color: darken($color: #7adfbf, $amount: 30%);
+    }
+  }
 }
 
-.pricing__title {
-	color: #3856a0;
-	font-weight: 800;
-}
+#faq-content {
+  padding: 64px;
 
-.pricing__table {
-	border-radius: 6px;
-	margin: 20px 0;
-	padding: 10px;
-	border: 1px solid #ccc;
-	justify-content: space-between;
-	display: flex;
-	flex-direction: column;
-
-	p {
-		font-weight: 800;
-	}
-}
-
-.pricing__table__section__title {
-	font-weight: 800;
-	color: #46739a;
-}
-
-.pricing__table__section {
-	border-bottom: 1px solid #ccc;
-	padding: 20px 0;
-}
-
-.pricing__table__section:last-child {
-	border-bottom: none;
-}
-
-.pricing__table__section__free {
-	color: #aa0000;
-	display: block;
-}
-
-.pricing__cta {
-	color: white;
-	font-weight: 700;
-	margin-top: 40px;
-	width: 100%;
-	border-radius: 25px;
-	background-image: linear-gradient(to left, #69b1ce, #698fce 33%, #3856a0);
-}
-
-.terms-title, .privacy-title {
-	font-weight: 800;
-	padding: 20px 0;
+  .faq-card {
+    padding: 12px;
+    h3 {
+      color: darken($color: #7adfbf, $amount: 40%);
+    }
+  }
 }
