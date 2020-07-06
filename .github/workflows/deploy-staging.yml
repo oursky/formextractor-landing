@@ -1,0 +1,26 @@
+name: deploy-staging
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy-master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Install dependencies
+        run: yarn install
+      - name: Generate production build
+        run: yarn run build
+      - name: Deploy Staging
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist 
+          CLEAN: true
